@@ -1,10 +1,10 @@
-AMD17 MIX CALC
+# AMD17 MIX CALC
 
 Hey guys, I noticed some errors in the mix count.
 
 # INTRO
 
-So these are all the possible final mixes (16 * 6 = 96 total)
+So according to the current calc, these are all the possible final mixes (96 total)
 
 ```
 A-1-1-1     B-1-1-1     C-1-1-1     D-1-1-1     E-1-1-1     F-1-1-1
@@ -28,15 +28,15 @@ A-2-2-4     B-2-2-4     C-2-2-4     D-2-2-4     E-2-2-4     F-2-2-4
 
 # ISSUE 1 - BEFORE COMPLETING THE FULL SELECTION
 
-## STAGE 1
-But, when the user is selecting the genre in Stage 1, they should not hear 'A-1-1-1', they should hear simply 'A'.
+## EXAMPLE - STAGE 1
+When the user is selecting the genre in Stage 1, they should not hear 'A-1-1-1', they should hear simply 'A'.
 
 
-## STAGE 2
+## EXAMPLE - STAGE 2
 And for example, if a user selected Genre A, and they are now in Stage 2 selecting between night or day, they should not hear A-1-1-1 or A-2-1-1, they should hear simply A-1 or A-2.
 
 
-In this way, we actually need the following mixes as well:
+In this way, we actually need the following mixes for stages 1 to 3:
 
 ```
 A           B           C           D           E           F
@@ -50,7 +50,7 @@ A-2-1       B-2-1       C-2-1       D-2-1       E-2-1       F-2-1
 A-2-2       B-2-2       C-2-2       D-2-2       E-2-2       F-2-2
 ```
 
-## COUNT
+## INTERMEDIARY COUNT
 
 That means for each stage, we need these:
 
@@ -61,11 +61,11 @@ Stage 3 - 24 10s loops
 That is an additional 42 10s loop intermediary mixes that must be prepared.
 
 
-# ISSUE 2 - STAGE 4 ALLOWS MULTI SELECT UP TO 2 OPTIONS
+# ISSUE 2 - STAGE 4 ALLOWS MULTI-SELECT, UP TO 2 OPTIONS
 
-This was news to me, I heard you guys actually wanted to let users choose 0, 1, or 2 options out of the 4 in Stage 4.
+This was news to me, I heard you guys actually wanted to let users choose **UP TO 2** options out of the 4 options in Stage 4.
 
-This means in stage 4, rather than simply
+This means in stage 4, instead of simply 4 options
 
 ```
 1
@@ -74,7 +74,7 @@ This means in stage 4, rather than simply
 4
 ```
 
-the options is actually
+there are actually 10 options
 
 ```
 1
@@ -140,6 +140,9 @@ A-2-2-34    B-2-2-34    C-2-2-34    D-2-2-34    E-2-2-34    F-2-2-34
 For a total of 240 final mixes.
 
 # FINAL COUNT
+
+So the files that will need to be created are:
+
 ```
 Stage 1 - 6 10s loops
 Stage 2 - 12 10s loops
