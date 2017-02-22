@@ -54,9 +54,11 @@ A-2-2       B-2-2       C-2-2       D-2-2       E-2-2       F-2-2
 
 That means for each stage, we need these:
 
+```
 Stage 1 - 6 10s loops
 Stage 2 - 12 10s loops
 Stage 3 - 24 10s loops
+```
 
 That is an additional 42 10s loop intermediary mixes that must be prepared.
 
